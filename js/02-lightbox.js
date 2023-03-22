@@ -23,20 +23,15 @@ const galleryMarkup = galleryItems
 containerGallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 containerGallery.addEventListener('click', (event) => event.preventDefault())
 
+//uso de la libreria SimplelightBox
+
 let lightbox = new SimpleLightbox('.gallery a', { 
     captionsData: 'alt',
     captionDelay: 250,
  });
- document.addEventListener('keydown', function(event) {
-    // Verificar si se presionó la tecla de flecha izquierda
-    if (event.code === 37) {
-      // Llamar al método prev para retroceder a la imagen anterior
-      prev.simplelightbox();
-    }
-    // Verificar si se presionó la tecla de flecha derecha
-    else if (event.code === 39) {
-      // Llamar al método next para avanzar a la siguiente imagen
-      next.simplelightbox();
-    }
-  });
+ let lightbox = new SimpleLightbox('.gallery a', { 
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
 
